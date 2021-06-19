@@ -1,0 +1,29 @@
+.container-description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+    border: solid 2px var(--border-color);
+    border-top: 0px;
+    background-color: #EDF7FC;
+    justify-content: flex-start;
+    color: var(--color);
+    height: fit-content;
+  }
+  .description-footer {
+    display: flex;
+    margin-top: 12px;
+  }
+  .cancel {
+    margin-left: auto;
+  }
+  .description-footer{
+      align-items: center;
+  }
+  .description-footer > i {
+      margin-left: 2px;
+  }
+  .dateAndTime{
+      display: flex;
+      width: -webkit-fill-available;
+  }
+  

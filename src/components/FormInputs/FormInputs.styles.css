@@ -1,0 +1,96 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+}
+.input {
+  margin-top: 5px;
+  position: relative;
+  background-color: white;
+  padding: 3px 5px;
+  border: solid 1px var(--border-color);
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100%;
+}
+.input:hover {
+  border: solid 1px rgb(10, 108, 255);
+}
+.input > i {
+  position: absolute;
+  right: 3%;
+  top: 25%;
+  font-size: 15px;
+}
+
+.date > i,
+.time > i {
+  position: absolute;
+  left: 3%;
+  top: 25%;
+  font-size: 15px;
+  width: fit-content;
+}
+
+.inputContainer > .input > input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.time {
+  margin-top: 5px;
+  position: relative;
+  background-color: white;
+  padding: 3px 5px;
+  border: solid 1px var(--border-color);
+  border-radius: 3px;
+  margin-left: 1px;
+}
+.time:hover {
+  border: solid 1px rgb(10, 108, 255);
+}
+.time > select {
+  border: none;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  padding-left: 20px;
+}
+.time > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+input[type="date"] {
+  padding-left: 20px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 10px;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+input[type="date"] {
+  flex-direction: row-reverse;
+}
+
+
+/* .input > i{
+    left: 0;
+} */
+
+/* ::-webkit-datetime-edit
+::-webkit-datetime-edit-fields-wrapper
+::-webkit-datetime-edit-text
+::-webkit-datetime-edit-month-field
+::-webkit-datetime-edit-day-field
+::-webkit-datetime-edit-year-field
+::-webkit-inner-spin-button
+::-webkit-calendar-picker-indicator */

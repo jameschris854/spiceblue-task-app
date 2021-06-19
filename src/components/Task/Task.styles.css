@@ -1,0 +1,68 @@
+.task-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  padding: 10px 5px;
+  font-weight: 500;
+  color: rgb(82, 82, 82);
+  margin-bottom: 1px;
+}
+.propic {
+  height: 37px;
+  width: 37px;
+}
+.propic > img {
+  width: 100%;
+  height: 100%;
+}
+.task-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+.task-time {
+  color: red;
+  font-size: 12px;
+}
+.task-options {
+  display: flex;
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+.task-options > .tick {
+  padding: 3px 5px;
+  box-shadow: -1px 0px 2px 0px #d1cfcf;
+  border-left: none;
+  font-size: 13px;
+  height: fit-content;
+}
+.tick:hover {
+  background-color: rgb(228, 228, 228);
+}
+.edit-task {
+  display: none;
+}
+
+.edit-task {
+  margin-right: 7px;
+}
+
+.edit-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.edit-wrapper > div {
+  padding: 3px 5px;
+  box-shadow: -1px 0px 2px 0px #d1cfcf;
+  border-left: none;
+  font-size: 13px;
+  height: fit-content;
+}
+
+.edit-wrapper:hover > div {
+  display: block;
+}
+.edit-wrapper > div:hover {
+  background-color: rgb(228, 228, 228);
+}

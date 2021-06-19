@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import "./App.css";
+import MainContainer from "./components/Container/container.component";
+import { setCurrentUser, setUserId } from "./redux/user/user.action";
 
-function App() {
+const App = ({ setLoginData, setUserId, token }) => {
+  // Loging in user and updating redux store with auth data
+  useEffect(() => {
+    axios
+      .post("https://stage.api.sloovi.com/login", {
+        email: "smithcheryl@yahoo.com",
+        password: "12345678",
+      })
+      .then((response) => setLoginData(response.data.results));
+  }, [setLoginData]);
+
+  // fetching userId using JWT token from login and updating redux store
+  useEffect(() => {
+    if (token) {
+      console.log(token);
+      axios
+        .get("https://stage.api.sloovi.com/user", {
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+          }
+        })
+        .then((response) => setUserId(response.data.results.id));
+    }
+  }, [token,setUserId]);
+
+  //Main container contains the task app
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainContainer />
     </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  token: state.user.token,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setLoginData: (loginData) => dispatch(setCurrentUser(loginData)),
+  setUserId: (userId) => dispatch(setUserId(userId)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

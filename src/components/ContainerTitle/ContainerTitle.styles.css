@@ -1,0 +1,24 @@
+.container-title {
+  display: flex;
+  justify-content: flex-start;
+  border: solid 2px var(--border-color);
+  text-align: center;
+  align-items: center;
+  background-color: var(--secondary-bg);
+  color: var(--color);
+  font-weight: 500;
+}
+.titleEl {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.tasks-number {
+  color: var(--secondary-color);
+}
+.add-btn {
+  margin-left: auto;
+  border-left: solid 2px var(--border-color);
+  padding: 4px 10px;
+  font-size: 25px;
+  cursor: pointer;
+}

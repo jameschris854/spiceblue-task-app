@@ -1,0 +1,19 @@
+.save{
+    margin-left: 10px;
+    color: white;
+    background-color: #47BB7F;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 7px 20px;
+}
+.cancel{
+    color: var(--color);
+    background-color:transparent;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 7px 20px;
+}
