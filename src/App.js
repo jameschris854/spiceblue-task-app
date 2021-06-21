@@ -36,6 +36,7 @@ const App = ({ setLoginData, setUserId, token }) => {
 
   return (
     <div className="App">
+      <div className='header'></div>
       <MainContainer />
     </div>
   );

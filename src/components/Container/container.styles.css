@@ -1,10 +1,14 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
   height: 300px;
-  box-shadow: -1px 2px 11px 2px #d1cfcf;
+  border:solid 2px var(--border-color);
+  align-self: flex-start;
+  margin-top: 10%;
+  margin-left: 1%;
+
 }
-.tasks-container{
+.tasks-container {
   overflow-y: scroll;
 }

@@ -9,15 +9,15 @@ const ContainerTitle = ({ handleAddTask, tasks }) => {
     <div className="container-title">
       <div className="titleEl">TASKS</div>
       <div className="tasks-number titleEl">{tasks.length}</div>
-      
-      <div className="add-btn" onClick={handleAddTask} >
-        <OverlayTrigger
-          placement="top"
-          overlay={<Tooltip id="tooltip-top">New Task</Tooltip>}
-        >
-          <div>+</div> 
-        </OverlayTrigger>
-      </div>
+
+      <OverlayTrigger
+        placement="top"
+        overlay={<Tooltip id="tooltip-top">New Task</Tooltip>}
+      >
+        <div className="add-btn" onClick={handleAddTask}>
+          +
+        </div>
+      </OverlayTrigger>
     </div>
   );
 };

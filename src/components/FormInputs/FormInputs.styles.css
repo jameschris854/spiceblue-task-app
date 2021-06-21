@@ -7,11 +7,11 @@
   margin-top: 5px;
   position: relative;
   background-color: white;
-  padding: 3px 5px;
-  border: solid 1px var(--border-color);
+  padding: 1px 5px;
   border-radius: 3px;
   overflow: hidden;
   width: 100%;
+  box-shadow:inset 0px 0px 3px 0px #c6c6c6;
 }
 .input:hover {
   border: solid 1px rgb(10, 108, 255);
@@ -42,10 +42,11 @@
   margin-top: 5px;
   position: relative;
   background-color: white;
-  padding: 3px 5px;
+  padding: 1px 5px;
   border: solid 1px var(--border-color);
   border-radius: 3px;
   margin-left: 1px;
+  box-shadow:inset 0px 0px 3px 0px #c6c6c6;
 }
 .time:hover {
   border: solid 1px rgb(10, 108, 255);

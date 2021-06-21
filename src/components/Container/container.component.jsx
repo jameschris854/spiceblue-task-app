@@ -17,7 +17,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 
 const MainContainer = ({ token, setAllTasks, tasks, setDropDownUsers }) => {
   //local component state using hooks to keep track of editing tasks and add task toggle
-  const [isaddTask, setIsAddTask] = useState(false);
+  const [isaddTask, setIsAddTask] = useState(true);
   const [editTasks, setEditTasks] = useState([]);
 
   const handleAddBtn = (view) => {
